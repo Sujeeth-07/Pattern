@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Recognition Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Assessment Tests</h2>
+        <div class="test-info">
+            <span class="element">Current Test: Pattern Recognition</span>
+        </div>
+        <br>
+        <p>Select the next pattern in the sequence:</p>
+
+        <div class="pattern-sequence">
+            <div class="pattern">⬛</div>
+            <div class="pattern">⚫</div>
+            <div class="pattern">⬛</div>
+            <div class="pattern">?</div>
+        </div>
+
+        <form action="/result" method="POST">
+            <div class="options">
+                <button type="submit" name="answer" value="square" class="option-btn">⬛ Square</button>
+                <button type="submit" name="answer" value="circle" class="option-btn">⚫ Circle</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
